@@ -1,1 +1,2 @@
 # whut-wifi
+本项目用于武汉理工大学的校园网linux环境下的wifi登录

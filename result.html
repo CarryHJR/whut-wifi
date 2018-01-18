@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" class="nojs pending"xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<meta name="description" content="Register with Desk.com Free!" />
+<meta name="author" content="Desk.com" />
+<meta name="renderer" content="ie-comp">
+<meta name="renderer" content="ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<!–[if lt IE 9]>
+<script src=”http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js”></script>
+<![endif]–>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+<meta name="renderer" content="webkit">
+<title>用户登录</title>
+<link href="css/login.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/easyui.css">
+<script src="./js/jquery.min.js" type="text/javascript"></script>
+<script language="javascript" src="js/base64.js"></script>
+<script type="text/javascript" src="js/pcauth.js"></script>
+<script language="javascript" src="js/srun_portal.js"></script>
+
+</head>
+<body youdao="bind">
+<div id="header">
+<div class="box">
+	<div class="logo">
+		<a title="武汉理工大学校园网认证系统" href="#"><img src="./images/logo.gif" alt="武汉理工大学校园网认证系统" border="0"> </a>
+	</div>
+</div>
+</div>
+	<div class="loginbody fixbackground">
+		<div class="head-row-box">
+			<div class="logintitle"></div>
+
+			    <div class="help-div" style=" padding: 18px 30px 0 0;">
+				<dl>
+					<dd>
+						<img src="./images/blank.gif" class="icon ico-service" alt="">
+					</dd>
+					<dt><!-- href="http://selfaaa.whut.edu.cn" -->
+						<a href="http://selfaaa.whut.edu.cn">自服务</a>
+					</dt>
+				</dl>
+                 <!--<dl>
+					<dd>
+						<img src="./images/blank.gif" class="icon ico-safety" alt="">
+					</dd>
+					<dt>
+						<a href="http://selfaaa.whut.edu.cn/index.php?action=register&go=kh">一卡通用户自助开户</a>
+					</dt>
+				</dl>
+				<dl>
+					<dd>
+						<img src="./images/blank.gif" class="icon ico-forgot-password" alt="">
+					</dd>
+					<dt>
+						<a href="http://selfaaa.whut.edu.cn/index.php?action=register">临时用户预开户</a>
+					</dt>
+				</dl>-->
+				<dl>
+					<dd>
+						<img src="./images/blank.gif" class="icon ico-userhelp" alt="">
+					</dd>
+					<dt>
+						<a href="http://selfaaa.whut.edu.cn/images/readme.doc">帮助</a>
+					</dt>
+				</dl>
+				<dl>
+					<dd>
+						<img src="./images/blank.gif" class="icon ico-userhelp" alt="">
+					</dd>
+					<dt>
+						<a href="http://selfaaa.whut.edu.cn/images/error.doc">防代理处理方法</a>
+					</dt>
+				</dl>
+			</div>
+		</div>
+
+		<!-- Login Box -->
+		<div id="loginbox">
+		                        					<form name="form2" action="srun_portal_pc.php?" method="post" onsubmit="return check1(this)">
+					<input type="hidden" name="action" value="login">
+					<input type="hidden" name="ac_id" value="26">
+					<input type="hidden" name="user_ip" value="">
+					<input type="hidden" name="nas_ip" value="">
+					<input type="hidden" name="user_mac" value="">
+					<input type="hidden" name="url" value="">
+				<div class="loginForm">
+					<div class="outbox">
+
+						<div class="fieldbox">
+							<div class="up"></div>
+							<div class="innerbox">
+								<div class="sprite request-msg"></div>
+								<p>unknown user()</p>
+								<dl class="dl-input">
+									<dt>
+										<span id="loginTypeName">用户名</span>：
+									</dt>
+									<dd class="sprite">
+										<input type="text" name="username"  id="loginname" maxlength="16" tabindex="1" value="" class="textinput requset user-input">
+									</dd>
+								</dl>
+
+								<dl class="dl-input">
+									<dt>密码：</dt>
+									<dd class="sprite">
+										<input type="password" name="password" maxlength="16" tabindex="2" id="password" value="" class="textinput requset">
+									</dd>
+
+								</dl>
+                               <dl style="height: 26px;">
+									<dt style="width: 100px;padding: 14px 6px 0 14px;text-align: right;">
+
+									</dt>
+									<dd style="width: 250px;padding: 5px 0 0 8px;position: relative;">
+										<INPUT name="save_me" title="Remember me" class="checkbox"  type="checkbox" checked="checked" value="1" >记住密码
+									</dd>
+								</dl>
+								<dl class="login-botton">
+									<dd>
+										<input type="submit" style="background-image:url('./images/ss_login.png');width:120px;height:42px;float: left;border: 1px solid #78b6e8;" alt="登录" value="" id="action_login">
+									</dd>
+									<dd>
+										&nbsp;&nbsp;&nbsp;<a onclick="do_logout()"><img src="./images/ss_logout.png" alt="远程注销" border="0"></a>
+									<!--<a href="#" onclick="do_force_logout()"><u>远程注销</u></a>-->
+									</dd>
+								</dl>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- 安全说明 -->
+					<div class="safety-tips">
+
+						<h3>
+							<img src="./images/blank.gif" class="icon ico-lock-24" alt="">系统公告
+						</h3>
+						<ul class="safaty-ul">
+							 <LI>
+							 	<div id="message">
+								    <p>欢迎使用武汉理工大学校园网！<br/>1、校园网分为教学办公区网络和宿舍区网络，其中宿舍区网络按学校相关政策缴费使用。<br/>2、校园网不需要开户，登录的用户名是校园卡卡号后六位的绝对值，密码为理工电子身份证密码（默认是身份证号的后六位）。<br/>3、如果登录过程中系统提示用户名或密码不对，请带上校园卡到<strong><span style="color: rgb(255, 0, 0);">马区</span></strong><span style="color: rgb(255, 0, 0);">鉴主19楼用户部1906（87651975）</span>或<strong><span style="color: rgb(255, 0, 0);">余区</span></strong><span style="color: rgb(255, 0, 0);">计算机学院实验中心2楼（86548310）</span>重置理工电子身份证密码。<br/>4、校园网登录的帐户和密码与用户的理工电子身份证是一致的，为了你的信息安全和网络使用正常，请用户保管好自己的帐号和密码，不要将帐户借给他人使用。若怀疑自己的账户有问题，请登录理工电子身份证修改登陆密码。<br/>5、为了更好地为用户提供服务，网络信息中心开通了微信公众号，我校师生可以通过手机微信扫描下面的二维码或搜索公众号
+ 
+“whutservice”予以关注。通过微信公众号可以了解网络最新运行公告、修改“理工电子身份证”密码和查询校园卡当日的消费流水、教职工用户还可以通过微信查询本月的工资情况等与用户个人相关的重要信息。<br/>学生宿舍用户注意：<br/> &nbsp; &nbsp; 现在宿舍区的用户直接通过web方式，登录认证使用校园网，无需使用客户端！<br/> <br/>您在校园网使用中有任何建议或问题，欢迎通过noc@whut.edu.cn邮箱和我们联系，也可以拨打维护热线联系：<span style="color: rgb(255, 0, 0);"><strong>87297533</strong></span>。</p><p><br/></p>
+ 
+							    </div>
+							</LI>
+						</ul>
+						<!--
+						<ul class="added-systemp-ul">
+
+							<li>
+								<h3>
+									<img src="./images/blank.gif" class="icon ico-systemp-24" alt="">客户端下载
+								</h3>
+							</li>
+                            <li class="i-li"><a class="windows" href="http://172.30.16.53/files/SRun3K.exe" target="_blank"></a><span>windows</span>
+                            </li>
+						</ul>-->
+
+						<ul class="added-systemp-ul">
+							<li>
+								<h3>
+									<img src="./images/blank.gif" class="icon ico-systemp-24" alt="">扫一扫，关注微服务
+								</h3>
+							</li>
+                            <li class="i-li"><img src="./images/weixin.jpg"><span>whutservice</span>
+                            </li>
+						</ul>
+
+					</div>
+					<!-- 安全说明 End -->
+					<div class="clear"></div>
+				</div>
+			</form>
+					</div>
+		<!-- Login Box End -->
+
+	</div>
+	<br>
+	<br>
+	<!--copyright-->
+	<div id="footer">
+<div class="box">
+	<dl>
+		<dt>武汉理工大学网络信息中心1</dt>
+	</dl>
+</div>
+</div>
+
+
+</body></html>
